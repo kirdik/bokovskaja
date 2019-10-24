@@ -1,4 +1,4 @@
-.idea/*
+.idea
 *.pyc
-__pycache__/*
 log-cow.log
+__pycache__
