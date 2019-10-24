@@ -36,20 +36,22 @@ class Person:
 
 
 class Soldier(Person):
-    def data_soldier(self, mtr_unit, do_death, ro_death, rip_loc):
+    def data_soldier(self, mtr_unit, do_death, ro_death, rip_loc, index):
         self.mtr_unit = mtr_unit
         self.do_death = do_death
         self.ro_death = ro_death
         self.rip_loc = rip_loc
-        soldier_l = [(self.mtr_unit, self.do_death, self.ro_death, self.rip_loc)]
+        self.index = index
+        soldier_l = [(self.mtr_unit, self.do_death, self.ro_death, self.rip_loc, self.index)]
         return soldier_l
 
 class Church(Person):
-    def metrika(self, godfather, godmother, father, mother, priest):
+    def metrika(self, godfather, godmother, father, mother, priest, index):
         self.godfather = godfather
         self.godmother = godmother
         self.father = father
         self.mother = mother
         self.priest = priest
-        church_l = [(self.godfather, self.godmother, self.father, self.mother, self.priest)]
+        self.index = index
+        church_l = [(self.godfather, self.godmother, self.father, self.mother, self.priest, self.index)]
         return church_l
