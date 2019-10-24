@@ -10,6 +10,7 @@ class Queries:
     sql_add_p = ' INSERT INTO person VALUES (?, ?, ?, ?, ?, ?), person '
     sql_add_s = 'INSERT INTO soldier VALUES (?, ?, ?, ?, ?), soldier'
     sql_add_c = 'INSERT INTO churching VALUES (?, ?, ?, ?, ?, ? ), church'
+    sql_upd_p = 'UPDATE person SET village = ? '
 
 
 
