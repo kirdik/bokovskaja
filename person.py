@@ -3,21 +3,21 @@ from typing import List, Any
 
 class Person:
 
-    do_birth = '1920-01-01'
-    do_death = '1941-01-01'
-    mtr_unit = 'Неизвестно'
-    ro_death = 'Неизвестно'
-    rip_loc = 'Неизвестно'
-    village = 'Неизвестно'
-    name = 'Неизвестно'
-    surname = 'Неизвестно'
-    patronymic = 'Неизвестно'
-    address = 'Неизвестно'
-    godfather = 'Неизвестно'
-    godmother = 'Неизвестно'
-    father = 'Неизвестно'
-    mother = 'Неизвстно'
-    priest = 'Неизвестно'
+    # do_birth = '1920-01-01'
+    # do_death = '1941-01-01'
+    # mtr_unit = 'Неизвестно'
+    # ro_death = 'Неизвестно'
+    # rip_loc = 'Неизвестно'
+    # village = 'Неизвестно'
+    # name = 'Неизвестно'
+    # surname = 'Неизвестно'
+    # patronymic = 'Неизвестно'
+    # address = 'Неизвестно'
+    # godfather = 'Неизвестно'
+    # godmother = 'Неизвестно'
+    # father = 'Неизвестно'
+    # mother = 'Неизвстно'
+    # priest = 'Неизвестно'
 
     def fio(self, village, name, surname, patronymic, do_birth, address):
         self.village = village
@@ -39,8 +39,9 @@ class Soldier(Person):
         self.mtr_unit = mtr_unit
         self.do_death = do_death
         self.ro_death = ro_death
-        self.rio_loc = rip_loc
-
+        self.rip_loc = rip_loc
+        soldier_tuple = (self.mtr_unit, self.do_death, self.ro_death, self.rip_loc)
+        return soldier_tuple
 
 class Church(Person):
     def metrika(self, godfather, godmother, father, mother, priest):
@@ -49,3 +50,5 @@ class Church(Person):
         self.father = father
         self.mother = mother
         self.priest = priest
+        church_tuple = (self.godfather, self.godmother, self.father, self.mother, self.priest)
+        return church_tuple
