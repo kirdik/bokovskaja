@@ -1,5 +1,8 @@
+from typing import List, Any
+
 
 class Person:
+
     do_birth = '1920-01-01'
     do_death = '1941-01-01'
     mtr_unit = 'Неизвестно'
@@ -16,7 +19,6 @@ class Person:
     mother = 'Неизвстно'
     priest = 'Неизвестно'
 
-
     def fio(self, village, name, surname, patronymic, do_birth, address):
         self.village = village
         self.name = name
@@ -24,6 +26,8 @@ class Person:
         self.patronymic = patronymic
         self.do_birth = do_birth
         self.address = address
+        fio_tuple = (self.village, self.name, self.surname, self.patronymic, self.do_birth, self.address)
+        return fio_tuple
 
     def info(self):
         print(f'Боец: {self.name} {self.surname} {self.patronymic} дата рождения: {self.do_birth} \n'
@@ -31,11 +35,12 @@ class Person:
 
 
 class Soldier(Person):
-    def data_soldier(self,  mtr_unit, do_death, ro_death, rip_loc):
+    def data_soldier(self, mtr_unit, do_death, ro_death, rip_loc):
         self.mtr_unit = mtr_unit
         self.do_death = do_death
         self.ro_death = ro_death
         self.rio_loc = rip_loc
+
 
 class Church(Person):
     def metrika(self, godfather, godmother, father, mother, priest):
@@ -44,7 +49,3 @@ class Church(Person):
         self.father = father
         self.mother = mother
         self.priest = priest
-
-
-
-
