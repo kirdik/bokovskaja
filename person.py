@@ -26,8 +26,9 @@ class Person:
         self.patronymic = patronymic
         self.do_birth = do_birth
         self.address = address
-        fio_tuple = (self.village, self.name, self.surname, self.patronymic, self.do_birth, self.address)
-        return fio_tuple
+
+        fio_l = [(self.village, self.name, self.surname, self.patronymic, self.do_birth, self.address)]
+        return fio_l
 
     def info(self):
         print(f'Боец: {self.name} {self.surname} {self.patronymic} дата рождения: {self.do_birth} \n'
@@ -40,8 +41,8 @@ class Soldier(Person):
         self.do_death = do_death
         self.ro_death = ro_death
         self.rip_loc = rip_loc
-        soldier_tuple = (self.mtr_unit, self.do_death, self.ro_death, self.rip_loc)
-        return soldier_tuple
+        soldier_l = [(self.mtr_unit, self.do_death, self.ro_death, self.rip_loc)]
+        return soldier_l
 
 class Church(Person):
     def metrika(self, godfather, godmother, father, mother, priest):
@@ -50,5 +51,5 @@ class Church(Person):
         self.father = father
         self.mother = mother
         self.priest = priest
-        church_tuple = (self.godfather, self.godmother, self.father, self.mother, self.priest)
-        return church_tuple
+        church_l = [(self.godfather, self.godmother, self.father, self.mother, self.priest)]
+        return church_l
